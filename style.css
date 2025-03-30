@@ -1,0 +1,545 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --blue: rgb(9, 117, 219);
+}
+
+
+html {
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+#header {
+    margin: auto;
+    margin-bottom: 30px;
+    overflow: auto;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(to bottom, var(--blue), rgb(2, 75, 138));
+    border-bottom: none !important;
+    box-shadow: 0 3px 6px #51515155;
+}
+
+footer {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--blue);
+    color: white;
+    margin-top: 30px;
+    padding: 5px 0;
+}
+
+.headerTxt {
+    padding: 1px 10px;
+    float: left;
+    font-size: 35px !important;
+    margin: 20px 0 0 0;
+    border-radius: 9px;
+    color: white;
+    scale: 1;
+    transition: 0.2s;
+    font-weight: 600;
+}
+
+.headerTxt:hover {
+    color: var(--blue);
+    background-color: white;
+}
+
+.headerTxt:active {
+    scale: 0.95
+}
+
+a,
+button a {
+    text-decoration: none;
+}
+
+#menuButtons {
+    float: right;
+    margin: 0 15px;
+    margin-top: 35px !important;
+}
+
+.menuBtn {
+    margin-right: 20px;
+    background-color: transparent;
+    border: solid 2px transparent;
+    font-size: 18px !important;
+    text-decoration: none !important;
+    color: rgb(244, 244, 244);
+    transition: 0.2s;
+    scale: 1;
+
+}
+
+.menuBtn:hover {
+    border: solid 2px white;
+    border-radius: 9px;
+}
+
+.menuBtn:active {
+    color: var(--blue);
+    background-color: white;
+    border-radius: 9px;
+    scale: 0.9;
+}
+
+.activePage,
+#header {
+    border-bottom: solid 2px white;
+}
+
+body {
+    margin: 0;
+    align-items: center;
+    font-size: 18px;
+}
+
+#registrationForm {
+    margin: 0 90px;
+    margin-bottom: 70px;
+}
+
+#bodyHeading,
+.receiptHeading {
+    text-decoration: underline;
+    color: var(--blue);
+}
+
+#registrationForm label,
+#tableFooter,
+.foodTitle {
+    font-weight: bold;
+}
+
+#registrationForm input,
+#registrationForm select {
+    font-size: 16px;
+    border: solid 2px #ddd;
+    border-radius: 9px;
+    margin-bottom: 13px;
+}
+
+#registrationForm button {
+    font-size: 16px;
+}
+
+#submitBtn2,
+#resetBtn2 {
+    margin-top: 20px;
+    padding: 8px;
+    font-size: 16px;
+    width: calc(50% - 10px);
+    font-weight: bold;
+    margin-right: 10px;
+    background-color: transparent;
+    border: solid 2px;
+    border-radius: 9px;
+    transition: 0.2s;
+    scale: 1;
+}
+
+#submitBtn,
+#resetBtn,
+#cartBtn {
+    margin-top: 25px;
+    margin-right: 150px;
+    background-color: transparent;
+    border: solid 2px;
+    border-radius: 9px;
+    transition: 0.2s;
+    scale: 1;
+}
+
+#submitBtn,
+hr,
+#submitBtn2 {
+    color: var(--blue);
+    border-color: var(--blue) !important;
+}
+
+#resetBtn,
+#resetBtn2 {
+    color: red;
+    border-color: red !important;
+}
+
+#cartBtn {
+    margin: 5px 0;
+    padding: 4px 20px !important;
+    color: rgb(30, 177, 23);
+    border-color: rgb(30, 177, 23) !important;
+    float: left;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#submitBtn:hover,
+#submitBtn2:hover {
+    color: white;
+    background-color: var(--blue);
+}
+
+#resetBtn:hover,
+#resetBtn2:hover {
+    color: white;
+    background-color: red;
+}
+
+#cartBtn:hover {
+    color: white;
+    background-color: rgb(30, 177, 23);
+}
+
+#submitBtn:active,
+#submitBtn2:active,
+#resetBtn:active,
+#resetBtn2:active,
+#cartBtn:active {
+    scale: 0.9;
+}
+
+.removeBtn {
+    font-size: 13px;
+    margin: 0 !important;
+    margin-left: 120px !important;
+    background-color: transparent;
+    border: solid 2px;
+    border-radius: 9px;
+    transition: 0.2s;
+    scale: 1;
+}
+
+#logo {
+    height: 80px;
+    width: 80px;
+    float: inline-start;
+    padding-top: 5px;
+    margin-left: 25px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#divMenu {
+    margin: auto;
+    width: 60em;
+    border: solid 2px var(--blue);
+    border-radius: 9px !important;
+}
+
+.foodMenu {
+    margin-bottom: 35% !important;
+}
+
+.receipt {
+    border: solid 2px var(--blue);
+    position: fixed;
+    right: 15px;
+    width: 22em;
+    padding: 60px 10px 12px;
+    float: right;
+    border-radius: 9px;
+    font-size: 16px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+.receiptHeading {
+    position: fixed;
+    text-align: center;
+    top: 170px;
+    font-size: 20px;
+}
+
+.cartTable {
+    float: left;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cartTable tr {
+    border-bottom: 1px solid #ddddddbb !important;
+}
+
+.cartTable tr:last-child {
+    border-bottom: none !important;
+}
+
+.decreaseBtn,
+.increaseBtn {
+    background-color: transparent;
+    border: solid 2px transparent;
+    border-radius: 999px;
+    transition: 0.2s;
+    scale: 1;
+    font-size: 22px !important;
+}
+
+.decreaseBtn:hover,
+.increaseBtn:hover {
+    border: solid 2px transparent;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: left;
+}
+
+th:first-child {
+    border-top-left-radius: 3px;
+}
+
+th:last-child {
+    border-top-right-radius: 3px;
+}
+
+th {
+    color: white;
+    background-color: var(--blue);
+}
+
+tr:first-child,
+tr:last-child {
+    border: none;
+}
+
+tr {
+    margin: 0 9px;
+    border-bottom: 1px solid #ddddddbb;
+}
+
+#tableFooter {
+    font-size: 15px;
+    text-align: center;
+    padding-bottom: 7px;
+}
+
+.foodNo {
+    width: 10px !important;
+    padding: 0 15px;
+}
+
+.foodImg {
+    width: 120px;
+    height: 120px;
+    border-radius: 9px;
+    scale: 1;
+    transition: 0.3s;
+    z-index: 1;
+}
+
+.foodImg:hover,
+.homeFoodImg:hover {
+    z-index: 10;
+    scale: 1.3;
+    box-shadow: 0 0 9px #555555ac;
+}
+
+.foodDesc {
+    opacity: 0.5;
+    font-weight: normal;
+    justify-content: left;
+}
+
+.menuGrid {
+    margin: auto;
+    display: inline-flex;
+}
+
+.menuItem {
+    padding: 20px 0 15px 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.menuTxt {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#homeDivs {
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    width: 70%;
+    border: solid 2px var(--blue);
+    border-radius: 9px !important;
+    margin-bottom: 40px;
+}
+
+.homeDiv {
+    width: 100%;
+    text-align: center;
+    scale: 1;
+    transition: 0.2s;
+}
+
+.homeDiv:hover {
+    scale: 1.05;
+}
+
+.homeFoodImg {
+    width: 130px;
+    height: 130px;
+    border-radius: 9px;
+    z-index: 1;
+    scale: 1;
+    transition: 0.2s;
+}
+
+.divider {
+    border-style: dashed !important;
+    border: solid 1px var(--blue);
+}
+
+.bodyImg {
+    width: 220px;
+    height: 220px;
+    border-radius: 9px;
+}
+
+.bodyFooter {
+    padding: 0 10px;
+    color: var(--blue);
+    font-style: italic;
+}
+
+
+#contactDivs {
+    margin: auto;
+    display: flex;
+}
+
+.contactDiv {
+    width: 100%;
+    text-align: left;
+}
+
+.contactDivider {
+    margin: 0 100px;
+}
+
+.contactDiv1 {
+    margin-left: 20px;
+    border-radius: 9px;
+}
+
+
+.contactDiv2 {
+    margin: 0 80px;
+    padding-left: 55px;
+    background: url("https://plus.unsplash.com/premium_photo-1727363542746-e26716fc5e16?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: 100% 100%;
+    box-shadow: 0 0 9px #555555ac;
+    border-radius: 3px;
+}
+
+.contactDiv2 ul {
+    font-family: monospace;
+    list-style-type: square !important;
+    list-style-position: outside;
+}
+
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+}
+
+.auth-box {
+    display: flex;
+    width: 40%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 9px;
+}
+
+.auth-form {
+    margin: auto;
+    width: 80%;
+    padding: 20px 0;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 9px;
+}
+
+.tab-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+    transition: 0.2s;
+    scale: 1;
+}
+
+.tab-btn.active {
+    border-bottom: 3px solid var(--blue);
+    color: var(--blue);
+}
+
+.auth-form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 17px;
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 9px;
+}
+
+.auth-form .btn {
+    width: 101%;
+    margin-top: 20px;
+    padding: 10px;
+    color: var(--blue);
+    font-weight: bold;
+    border: 2px solid transparent;
+    background-color: transparent;
+    border-radius: 9px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+#errorDiv,
+#successDiv {
+    padding: 10px 0 0 0;
+    text-align: center;
+    border-radius: 9px;
+}
+
+#errorDiv {
+    color: red;
+}
+
+#successDiv {
+    color: rgb(62, 189, 62);
+}
+
+.auth-form .btn:hover {
+    border: 2px solid var(--blue);
+}
+
+.auth-form .btn:active {
+    background-color: var(--blue);
+    color: white;
+}
